@@ -1,17 +1,10 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 18
-
   build:
     commands:
       - echo "Building website..."
-      - mkdir -p build
-      - cp -r * build/
 
 artifacts:
   files:
     - '**/*'
-  base-directory: build
