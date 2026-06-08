@@ -1,9 +1,20 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+
+  pre_build:
+    commands:
+      - echo "Running Quality Gate Test..."
+      - chmod +x tests/test_html.sh
+      - tests/test_html.sh
+
   build:
     commands:
-      - echo "Building website..."
+      - echo "Build phase running..."
+      - echo "Static site - no build needed"
 
 artifacts:
   files:
